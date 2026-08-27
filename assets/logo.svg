@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Batman Plugin Logo</title>
+  <desc id="desc">Yellow emblem on a dark badge for the Batman Cursor plugin.</desc>
+  <rect width="128" height="128" rx="24" fill="#0B0B0B"/>
+  <ellipse cx="64" cy="68" rx="46" ry="28" fill="#F5C518"/>
+  <path
+    d="M20 68c8-6 16-10 24-8 2-10 6-18 12-22 2 8 6 14 8 18 2-4 6-10 8-18 6 4 10 12 12 22 8-2 16 2 24 8-10 4-18 10-28 12-4 6-8 10-16 10s-12-4-16-10c-10-2-18-8-28-12z"
+    fill="#0B0B0B"
+  />
+</svg>

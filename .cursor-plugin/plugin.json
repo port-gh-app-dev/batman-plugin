@@ -1,0 +1,40 @@
+{
+  "name": "batman",
+  "displayName": "Batman",
+  "version": "0.1.0",
+  "description": "Sample Cursor plugin with MCP servers, skills, rules, agents, commands, and hooks. Use as a starting point for building and publishing your own plugin.",
+  "author": {
+    "name": "Port",
+    "email": "support@port.io",
+    "url": "https://port.io"
+  },
+  "homepage": "https://github.com/port-gh-app-dev/batman-plugin",
+  "repository": "https://github.com/port-gh-app-dev/batman-plugin",
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "plugin",
+    "mcp",
+    "skills",
+    "rules",
+    "agents",
+    "hooks",
+    "sample"
+  ],
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "POSTGRES_URL": {
+        "type": "string",
+        "title": "Postgres connection string",
+        "description": "Connection string for the sample Postgres MCP server (postgresql://user:pass@host:5432/db)"
+      },
+      "SAMPLE_API_TOKEN": {
+        "type": "string",
+        "title": "Sample API token",
+        "description": "Bearer token for the sample remote HTTP MCP server"
+      }
+    }
+  }
+}

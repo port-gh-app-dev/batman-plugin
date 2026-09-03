@@ -20,6 +20,12 @@
       "headers": {
         "Authorization": "Bearer ${SAMPLE_API_TOKEN}"
       }
+    },
+      "redis-mcp": {
+      "url": "https://mcp.redis.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SAMPLE_API_TOKEN}"
+      }
     }
   }
 }

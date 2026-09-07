@@ -87,6 +87,31 @@ Review this PR for security issues
 /deploy-staging
 ```
 
+### Local validation
+
+Run the same checks used by CI before publishing or sharing a local plugin:
+
+```bash
+./scripts/validate-plugin.sh
+./scripts/format-code.sh
+```
+
+The validator checks JSON syntax, required manifest metadata, MCP server
+definitions, hook references, executable permissions, and required
+documentation. It exits non-zero when a required check fails.
+
+The lifecycle hooks are intentionally conservative:
+
+- `format-code.sh` verifies that hook scripts are executable and consistently
+  newline-terminated.
+- `validate-shell.sh` blocks destructive commands and suspicious download
+  pipelines before they run.
+- `audit.sh` checks that the plugin's core files exist at session end and warns
+  when a sample endpoint is still configured.
+
+Hook scripts receive their command input from Cursor. When run manually,
+`validate-shell.sh` also accepts the command as its first argument.
+
 ---
 
 ## Repository structure

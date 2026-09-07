@@ -1,13 +1,15 @@
 
-name: ci_workflow_1_cuzj
+name: Validate Batman plugin
 on: [push, pull_request]
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Run a one-line script
-      run: echo "Hello, world from ci_workflow_1_cuzj in $(basename $GITHUB_REPOSITORY)!"
-    - name: Simulate tests
-      run: sleep 10 && echo "Tests passed!"
+    - name: Validate plugin configuration
+      run: ./scripts/validate-plugin.sh
+    - name: Check shell scripts
+      run: ./scripts/format-code.sh
+    - name: Run shell syntax checks
+      run: find scripts -type f -name '*.sh' -exec bash -n {} +

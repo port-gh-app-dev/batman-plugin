@@ -15,8 +15,14 @@
         "POSTGRES_CONNECTION_STRING": "${POSTGRES_URL}"
       }
     },
-    "sample-remote": {
-      "url": "https://mcp.example.com/mcp",
+    "maps-direction": {
+      "url": "https://mcp.maps.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SAMPLE_API_TOKEN}"
+      }
+    },
+      "redis-mcp": {
+      "url": "https://mcp.redis.com/mcp",
       "headers": {
         "Authorization": "Bearer ${SAMPLE_API_TOKEN}"
       }
